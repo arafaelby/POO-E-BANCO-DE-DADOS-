@@ -1,0 +1,35 @@
+📌 RELACIONAMENTOS
+
+em relacionamento 1:1 vai ter uma tabela independente  e outra dependente.
+
+A PK da dependente vai ser a PK da outra, que ao mesmo tempo vai ser FK.
+
+👉 Exemplo (Aluno – Matrícula): 
+
+Aluno (id_aluno PK)
+
+Matrícula (id_aluno PK, FK → Aluno)
+
+A matrícula só existe se existir o aluno.
+
+Em relacionamento 1:N
+A entidade do lado “N” recebe a FK da entidade do lado “1”.
+Porém ambas teriam suas próprias PK's
+
+👉 Exemplo (Escola – Matéria):
+
+Escola (id_escola PK)
+
+Matéria (id_materia PK, id_escola FK)
+
+Muitas matérias pertencem a uma escola.
+
+Em relacionamento N:N vai ser criado uma terceira tabela associativa onde ela vai receber duas FK's como PK
+
+👉 Exemplo (Aluno – Matéria):
+
+Aluno (id_aluno PK)
+
+Matéria (id_materia PK)
+
+Aluno_Matéria (id_aluno PK/FK, id_materia PK/FK)
